@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projets | AISSAM Ilyess</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+        <a href="formation.html"><i class="fas fa-graduation-cap"></i> Formation</a>
+        <a href="ecole.html"><i class="fas fa-university"></i> École</a>
+        <a href="entreprise.html"><i class="fas fa-building"></i> Entreprise</a>
+        <a href="competences.html"><i class="fas fa-laptop-code"></i> Compétences</a>
+        <a href="projets.html" class="active"><i class="fas fa-project-diagram"></i> Projets</a>
+        <a href="veille.html"><i class="fas fa-satellite-dish"></i> Veille</a>
+    </nav>
+
+    <div class="container">
+        <div class="card" style="text-align: center; border-bottom: 4px solid var(--accent); margin-top: 1rem;">
+            <h1 style="margin-bottom: 0;">Mes Projets & Réalisations</h1>
+            <p style="margin-top: 10px;">Mise en pratique de mes compétences en infrastructure et cybersécurité.</p>
+        </div>
+
+        <div class="card">
+            <div class="grid-2" style="align-items: center;">
+                <div>
+                    <span class="date-badge" style="background: rgba(220, 38, 38, 0.1); color: #ef4444; border: 1px solid #ef4444;"><i class="fas fa-shield-alt"></i> Cybersécurité</span>
+                    <h2 style="margin-top: 10px; border: none; padding: 0;"><i class="fas fa-user-secret" style="color: var(--text-light);"></i> Attaque MITM avec Ettercap</h2>
+                    <p><strong>Contexte :</strong> Mise en place d'une attaque de type <em>Man-In-The-Middle</em> (ARP Spoofing) dans un environnement de test isolé, afin de comprendre les vulnérabilités des réseaux locaux et d'apprendre à les sécuriser.</p>
+                    <h3 style="color: var(--accent); margin-top: 1rem; font-size: 1rem;">Missions réalisées :</h3>
+                    <ul>
+                        <li>Configuration de l'environnement d'attaque (ex: Kali Linux).</li>
+                        <li>Empoisonnement du cache ARP (ARP Poisoning) pour détourner le trafic.</li>
+                        <li>Interception et analyse des trames réseau non chiffrées (utilisation de Wireshark).</li>
+                        <li>Étude et proposition de contre-mesures (Dynamic ARP Inspection, Port Security, protocoles chiffrés).</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/600x400?text=Capture+Ecran+Ettercap" alt="Interface Ettercap" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="grid-2" style="align-items: center;">
+                <div>
+                    <img src="https://via.placeholder.com/600x400?text=Capture+Configuration+VPN" alt="Configuration VPN" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                </div>
+                <div>
+                    <span class="date-badge"><i class="fas fa-network-wired"></i> Infrastructure Réseau</span>
+                    <h2 style="margin-top: 10px; border: none; padding: 0;"><i class="fas fa-lock" style="color: var(--text-light);"></i> Déploiement d'un tunnel VPN</h2>
+                    <p><strong>Contexte :</strong> Installation et paramétrage d'un réseau privé virtuel (VPN) permettant un accès distant sécurisé aux ressources internes de l'entreprise pour les collaborateurs en télétravail.</p>
+                    <h3 style="color: var(--accent); margin-top: 1rem; font-size: 1rem;">Missions réalisées :</h3>
+                    <ul>
+                        <li>Installation du service serveur VPN (OpenVPN / WireGuard / IPsec).</li>
+                        <li>Création et gestion de l'infrastructure à clés publiques (PKI) et des certificats cryptographiques.</li>
+                        <li>Configuration des règles de routage (NAT) et du pare-feu pour autoriser le trafic.</li>
+                        <li>Tests de connexion sécurisée depuis un poste client distant.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
