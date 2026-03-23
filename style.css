@@ -1,142 +1,118 @@
 /* =========================================
-   PORTFOLIO SISR - STYLE "TERMINAL MODERN"
-   By AISSAM Ilyess
+   PORTFOLIO PROFESSIONNEL - DARK MODE MODERNE
+   Design épuré, lisible et sobre
    ========================================= */
 
-/* --- 1. VARIABLES DE COULEURS (LE THÈME) --- */
 :root {
-    --bg-dark: #000000;          /* Noir pur (Terminal) */
-    --bg-card: #0a0a0a;          /* Presque noir pour les cartes */
-    --text-main: #e0e0e0;        /* Gris très clair (lecture facile) */
-    --text-muted: #888888;       /* Gris moyen pour les textes secondaires */
-    --accent: #00ff41;           /* VERT NÉON MATRIX (Couleur principale) */
-    --accent-glow: rgba(0, 255, 65, 0.3); /* Lueur verte */
-    --border: #1a1a1a;           /* Bordure très discrète */
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-mono: 'Courier New', Courier, monospace; /* Police Terminal */
+    --bg-body: #0d1117;       /* Bleu-noir profond (Style GitHub) */
+    --bg-card: #161b22;       /* Gris-bleu foncé pour les cartes */
+    --accent: #2f81f7;        /* Bleu professionnel moderne */
+    --text-main: #c9d1d9;     /* Gris clair (doux pour les yeux) */
+    --text-bold: #ffffff;     /* Blanc pur pour les titres */
+    --border: #30363d;        /* Bordures discrètes */
+    --nav-bg: rgba(22, 27, 34, 0.95);
 }
 
-/* --- 2. RESET & BASES --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* --- BASES --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-body);
     color: var(--text-main);
-    font-family: var(--font-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
 
-/* --- 3. TYPOGRAPHIE (STYLE CYBER) --- */
-h1, h2, h3, h4 {
-    font-family: var(--font-mono); /* Police Monospace pour les titres */
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-h2 { font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--accent); padding-bottom: 10px; display: inline-block; }
-h3 { font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent); }
-
-p { margin-bottom: 1rem; color: var(--text-main); }
-strong { color: var(--accent); font-weight: 600; }
-
-/* --- 4. LE MENU DE NAVIGATION (PLUS SOBRE) --- */
+/* --- NAVIGATION --- */
 nav {
-    background-color: var(--bg-card);
-    border-bottom: 1px solid var(--accent);
-    padding: 15px 0;
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     text-align: center;
-    box-shadow: 0 2px 15px var(--accent-glow);
+    backdrop-filter: blur(10px); /* Effet de flou moderne */
 }
 
 nav a {
     color: var(--text-main);
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    font-family: var(--font-mono);
-    transition: all 0.3s ease;
-    padding: 5px 10px;
-    border: 1px solid transparent;
+    margin: 0 12px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    padding: 6px 12px;
+    border-radius: 6px;
 }
 
 nav a:hover, nav a.active {
     color: var(--accent);
-    border: 1px solid var(--accent);
-    background-color: rgba(0, 255, 65, 0.05);
-    box-shadow: 0 0 10px var(--accent-glow);
+    background: rgba(47, 129, 247, 0.1);
 }
 
-/* Ajout d'icônes dans le menu */
-nav a i {
-    margin-right: 8px;
-    color: var(--accent);
-}
+/* --- TITRES --- */
+h1, h2, h3 { color: var(--text-bold); margin-bottom: 1rem; }
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 10px; }
 
-/* --- 5. LES CARTES (STYLE TERMINAL BRUT) --- */
+/* --- CARTES --- */
 .card {
     background-color: var(--bg-card);
-    border: 1px solid #1a1a1a; /* Bordure fine */
-    border-radius: 0px; /* COINS CARRÉS (Fini l'arrondi générique) */
-    padding: 30px;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    border: 1px solid var(--border);
+    border-radius: 12px; /* Arrondis légers et modernes */
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Effet de lueur au survol de la carte */
-.card:hover {
-    transform: translateY(-3px);
-    border-color: var(--accent);
-    box-shadow: 0 5px 30px var(--accent-glow);
+/* --- GRILLES --- */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+
+@media (max-width: 768px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
 }
 
-/* Petit triangle décoratif style Cyber dans le coin */
-.card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 15px 15px 0;
-    border-color: transparent var(--accent) transparent transparent;
-    opacity: 0.5;
-}
-
-/* --- 6. BOUTONS (STYLE MATRICE) --- */
-.btn-group {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
+/* --- BOUTONS --- */
+.btn-group { display: flex; gap: 10px; margin-top: 15px; }
 .btn {
-    display: inline-block;
-    padding: 12px 24px;
+    padding: 10px 20px;
+    border-radius: 6px;
     text-decoration: none;
-    font-weight: bold;
-    font-family: var(--font-mono);
-    text-transform: uppercase;
+    font-weight: 600;
     font-size: 0.9rem;
-    border-radius: 0px; /* Coins carrés */
-    transition:
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.btn-primary { background-color: var(--accent); color: white; }
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.btn-outline { border: 1px solid var(--border); color: var(--accent); }
+.btn-outline:hover { background: rgba(47, 129, 247, 0.1); }
+
+/* --- ÉLÉMENTS SPÉCIFIQUES --- */
+.skill-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.skill-box i { color: var(--accent); font-size: 1.5rem; margin-bottom: 10px; }
+
+.date-badge {
+    font-size: 0.75rem;
+    background: rgba(47, 129, 247, 0.15);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Image de profil */
+img { max-width: 100%; height: auto; border-radius: 8px; }
