@@ -19,48 +19,50 @@
     </nav>
 
     <div class="container">
-        <div class="card" style="text-align: center; border-bottom: 4px solid var(--accent); margin-top: 1rem;">
-            <h1 style="margin-bottom: 0;">Mes Projets & Réalisations</h1>
-            <p style="margin-top: 10px;">Mise en pratique de mes compétences en infrastructure et cybersécurité.</p>
+        
+        <div class="card" style="text-align: center; margin-bottom: 2rem;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0;">MES PROJETS</h1>
+            <h3 style="color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-top: 0;">Réalisations Techniques (BTS SIO)</h3>
+            <p style="max-width: 800px; margin: 1rem auto 0 auto; color: var(--text-light);">
+                Découvrez ci-dessous les projets majeurs que j'ai réalisés au cours de ma formation. Ces cas pratiques illustrent mes compétences en cybersécurité, en administration système et en déploiement réseau.
+            </p>
         </div>
 
-        <div class="card">
-            <div class="grid-2" style="align-items: center;">
-                <div>
-                    <span class="date-badge" style="background: rgba(220, 38, 38, 0.1); color: #ef4444; border: 1px solid #ef4444;"><i class="fas fa-shield-alt"></i> Cybersécurité</span>
-                    <h2 style="margin-top: 10px; border: none; padding: 0;"><i class="fas fa-user-secret" style="color: var(--text-light);"></i> Attaque MITM avec Ettercap</h2>
-                    <p><strong>Contexte :</strong> Mise en place d'une attaque de type <em>Man-In-The-Middle</em> (ARP Spoofing) dans un environnement de test isolé, afin de comprendre les vulnérabilités des réseaux locaux et d'apprendre à les sécuriser.</p>
-                    <h3 style="color: var(--accent); margin-top: 1rem; font-size: 1rem;">Missions réalisées :</h3>
-                    <ul>
-                        <li>Configuration de l'environnement d'attaque (ex: Kali Linux).</li>
-                        <li>Empoisonnement du cache ARP (ARP Poisoning) pour détourner le trafic.</li>
-                        <li>Interception et analyse des trames réseau non chiffrées (utilisation de Wireshark).</li>
-                        <li>Étude et proposition de contre-mesures (Dynamic ARP Inspection, Port Security, protocoles chiffrés).</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/600x400?text=Capture+Ecran+Ettercap" alt="Interface Ettercap" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                </div>
+        <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="border-bottom: none; margin-bottom: 0.5rem;"><i class="fas fa-user-secret" style="color: var(--accent);"></i> Attaque ARP Poisoning (Ettercap)</h2>
+                <div class="date-badge">Cybersécurité & Réseau</div>
+                <p style="margin-top: 1rem; text-align: justify;">
+                    Mise en place d'une simulation d'attaque de type <strong>Man-in-the-Middle (MITM)</strong> dans un environnement réseau contrôlé en utilisant l'outil <strong>Ettercap</strong> sous Kali Linux. 
+                    L'objectif de ce projet était de comprendre les vulnérabilités du protocole ARP, d'intercepter le trafic non chiffré entre deux machines, et surtout de mettre en place les contre-mesures nécessaires (comme le Dynamic ARP Inspection sur les switchs Cisco) pour sécuriser le réseau contre cette menace.
+                </p>
+            </div>
+            
+            <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid var(--border);">
+                <i class="fas fa-file-word fa-3x" style="color: #2b579a; margin-bottom: 15px;"></i>
+                <br>
+                <a href="dossier-ettercap.docx" target="_blank" class="btn btn-primary" style="background-color: #2b579a; border-color: #2b579a;">
+                    <i class="fas fa-download"></i> Consulter le dossier
+                </a>
             </div>
         </div>
 
-        <div class="card">
-            <div class="grid-2" style="align-items: center;">
-                <div>
-                    <img src="https://via.placeholder.com/600x400?text=Capture+Configuration+VPN" alt="Configuration VPN" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                </div>
-                <div>
-                    <span class="date-badge"><i class="fas fa-network-wired"></i> Infrastructure Réseau</span>
-                    <h2 style="margin-top: 10px; border: none; padding: 0;"><i class="fas fa-lock" style="color: var(--text-light);"></i> Déploiement d'un tunnel VPN</h2>
-                    <p><strong>Contexte :</strong> Installation et paramétrage d'un réseau privé virtuel (VPN) permettant un accès distant sécurisé aux ressources internes de l'entreprise pour les collaborateurs en télétravail.</p>
-                    <h3 style="color: var(--accent); margin-top: 1rem; font-size: 1rem;">Missions réalisées :</h3>
-                    <ul>
-                        <li>Installation du service serveur VPN (OpenVPN / WireGuard / IPsec).</li>
-                        <li>Création et gestion de l'infrastructure à clés publiques (PKI) et des certificats cryptographiques.</li>
-                        <li>Configuration des règles de routage (NAT) et du pare-feu pour autoriser le trafic.</li>
-                        <li>Tests de connexion sécurisée depuis un poste client distant.</li>
-                    </ul>
-                </div>
+        <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-left: 4px solid var(--accent);">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="border-bottom: none; margin-bottom: 0.5rem;"><i class="fas fa-server" style="color: var(--accent);"></i> Déploiement GLPI & GPO Active Directory</h2>
+                <div class="date-badge">Administration Système</div>
+                <p style="margin-top: 1rem; text-align: justify;">
+                    <strong>Déploiement de GLPI et automatisation de l’installation de l’Agent GLPI via GPO sur un serveur Active Directory.</strong><br><br>
+                    Installation et configuration d'une solution complète de gestion de parc informatique (GLPI/ITIL). Pour optimiser la remontée d'inventaire, j'ai configuré un serveur Windows Server avec le rôle AD DS. J'ai ensuite créé et paramétré une <strong>Stratégie de Groupe (GPO)</strong> permettant le déploiement automatisé et silencieux de l'agent sur l'ensemble des postes clients joints au domaine. Ce projet démontre ma capacité à automatiser des tâches d'administration à grande échelle.
+                </p>
+            </div>
+            
+            <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid var(--border);">
+                <i class="fas fa-file-word fa-3x" style="color: #2b579a; margin-bottom: 15px;"></i>
+                <br>
+                <a href="dossier-glpi.docx" target="_blank" class="btn btn-primary" style="background-color: #2b579a; border-color: #2b579a;">
+                    <i class="fas fa-download"></i> Consulter le dossier
+                </a>
             </div>
         </div>
 
